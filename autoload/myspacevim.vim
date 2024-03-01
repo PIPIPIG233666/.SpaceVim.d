@@ -22,6 +22,17 @@ function! myspacevim#before() abort
     else
         return {}
     endif
+    let g:syntastic_ebuild_checkers = ['pkgcheck']
+
+    let g:vimspector_sidebar_width = 75
+    let g:vimspector_bottombar_height = 15
+    let g:vimspector_code_minwidth = 90
+    let g:vimspector_terminal_maxwidth = 75
+    let g:vimspector_terminal_minwidth = 20
+    let g:vimspector_variables_display_mode = 'full'
+
+    let g:neoformat_enabled_cpp = ['clangformat']
+
 endfunction
 call SpaceVim#plugins#tasks#reg_provider(function('s:make_tasks'))
 endfunction
