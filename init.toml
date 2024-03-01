@@ -1,0 +1,138 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2023 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "dracula"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+
+[[custom_plugins]]
+name = "dracula/vim"
+
+[[custom_plugins]]
+repo = "gentoo/gentoo-syntax"
+
+[[custom_plugins]]
+repo = "github/copilot.vim"
+
+# Enable autocomplete layer
+[[layers]]
+  name = 'autocomplete'
+  autocomplete_method = 'nvim-cmp'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "smart"
+  # enable = false
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = "git"
+
+[[layers]]
+name = "github"
+
+[[layers]]
+  name = "VersionControl"
+
+[[custom_plugins]]
+repo = "andymass/vim-matchup"
+# note: you need to disable merged feature
+merged = false
+
+[[custom_plugins]]
+repo = "lilydjwg/colorizer"
+merged = false
+
+[[custom_plugins]]
+repo = "makerj/vim-pdf"
+
+[[custom_plugins]]
+repo = "djoshea/vim-autoread"
+
+
+[[layers]]
+  name = "lang#latex"
+
+[[layers]]
+name = "format"
+
+[[layers]]
+  name = "lang#c"
+  enable_clang_syntax_highlight = true
+
+[options]
+  project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.vimspector.json']
+  project_rooter_outermost = false
+
+[options]
+   todo_labels = ['FIXME', 'question', 'TODO', 'idea']
+   todo_prefix = '@'
+
+[[layers]]
+  name = "lang#typescript"
+
+[[layers]]
+  name = "debug"
+  debugger_plugin = "vimspector"
+
+[[layers]]
+  name = "lang#cmake"
+
+[[layers]]
+  name = "lang#julia"
+
+[[layers]]
+  name = "sudo"
+
+[[layers]]
+  name = 'lang#markdown'
+  enableWcwidth = 1
+  listItemIndent = 1
+  enabled_formater = ['prettier']
+
+[[layers]]
+    name = 'checkers'
+    lint_on_the_fly  = true
+    lint_on_save = true
+
+[[layers]]
+    name = 'edit'
+    autosave_timeout = 300000
+    # autosave_events = ['InsertLeave', 'TextChanged']
+    # autosave_all_buffers = true
+    enable_hop = false
+
+[[layers]]
+    name = 'ui'
+    enable_scrollbar = true
+    enable_indentline = true
+    indentline_char = '│'
+    # filetree_show_hidden = true
+    cursorword_delay = 200
+    cursorword_exclude_filetype = ['markdown']
+    indentline_exclude_filetyps = ['startify', 'help']
+
+[options]
+  bootstrap_before = 'myspacevim#before'
+  bootstrap_after = 'myspacevim#after'
