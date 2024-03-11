@@ -23,6 +23,15 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
+# how project rooter are defined
+  project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.vimspector.json']
+  project_rooter_outermost = false
+# todo
+   todo_labels = ['FIXME', 'question', 'TODO', 'idea']
+   todo_prefix = '@'
+# bootstraps
+  bootstrap_before = 'myspacevim#before'
+  bootstrap_after = 'myspacevim#after'
 
 [[custom_plugins]]
 name = "dracula/vim"
@@ -81,14 +90,6 @@ name = "format"
   name = "lang#c"
   enable_clang_syntax_highlight = true
 
-[options]
-  project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.vimspector.json']
-  project_rooter_outermost = false
-
-[options]
-   todo_labels = ['FIXME', 'question', 'TODO', 'idea']
-   todo_prefix = '@'
-
 [[layers]]
   name = "lang#typescript"
 
@@ -133,6 +134,6 @@ name = "format"
     cursorword_exclude_filetype = ['markdown']
     indentline_exclude_filetyps = ['startify', 'help']
 
-[options]
-  bootstrap_before = 'myspacevim#before'
-  bootstrap_after = 'myspacevim#after'
+
+[[layers]]
+  name = "VersionControl"
