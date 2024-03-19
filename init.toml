@@ -8,6 +8,10 @@
 
 # All SpaceVim option below [option] section
 [options]
+use_lua = 1
+autocomplete_method = 'coc'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
 # set spacevim theme. by default colorscheme layer is not loaded,
 # if you want to use more colorscheme, please load the colorscheme
 # layer
@@ -52,9 +56,6 @@ repo = "github/copilot.vim"
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
-autocomplete_method = 'nvim-cmp'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "smart"
 # enable = false
 
 [[layers]]
@@ -68,24 +69,9 @@ name = "git"
 [[layers]]
 name = "github"
 
-[[layers]]
-name = "VersionControl"
-
-[[custom_plugins]]
-repo = "andymass/vim-matchup"
-# note: you need to disable merged feature
-merged = false
-
 [[custom_plugins]]
 repo = "lilydjwg/colorizer"
 merged = false
-
-[[custom_plugins]]
-repo = "makerj/vim-pdf"
-
-[[custom_plugins]]
-repo = "djoshea/vim-autoread"
-
 
 [[layers]]
 name = "lang#latex"
@@ -96,9 +82,6 @@ name = "format"
 [[layers]]
 name = "lang#c"
 enable_clang_syntax_highlight = true
-
-[[layers]]
-name = "lang#typescript"
 
 [[layers]]
 name = "debug"
@@ -141,6 +124,32 @@ cursorword_delay = 200
 cursorword_exclude_filetype = ['markdown']
 indentline_exclude_filetyps = ['startify', 'help']
 
+[[layers]]
+name = 'telescope'
+enable = 'has("nvim")'
 
 [[layers]]
-name = "VersionControl"
+name = 'lang#sh'
+bash-file-head = [
+  '#!/usr/bin/env bash',
+  '# Time: `strftime("%Y-%m-%d %T")`',
+  '',
+]
+
+[[layers]]
+name = 'lang#python'
+python_file_head = [
+  '# -*- coding: utf-8 -*-',
+  '# Author: Pppig236',
+  '# Mail: umich.email@pppig236.com',
+  '# Created Time: `strftime("%a %b %d")`',
+  '',
+]
+
+[[layers]]
+name = 'lang#toml'
+
+[[layers]]
+name = 'lsp'
+enabled_clients = ['clangd', 'lua_ls']
+enable = true
