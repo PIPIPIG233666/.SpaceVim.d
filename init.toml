@@ -22,11 +22,11 @@ colorscheme_bg = "dark"
 enable_guicolors = true
 # Disable statusline separator, if you want to use other value, please
 # install nerd fonts
-statusline_separator = "arrow"
-statusline_iseparator = "arrow"
+statusline_separator = "bar"
+statusline_iseparator = "bar"
 buffer_index_type = 4
 enable_tabline_filetype_icon = true
-enable_statusline_mode = false
+enable_statusline_mode = true
 # how project rooter are defined
 project_rooter_patterns = [
   '.git/',
@@ -56,7 +56,6 @@ repo = "github/copilot.vim"
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
-# enable = false
 
 [[layers]]
 name = 'shell'
@@ -111,7 +110,7 @@ lint_on_save = true
 name = 'edit'
 autosave_timeout = 300000
 # autosave_events = ['InsertLeave', 'TextChanged']
-# autosave_all_buffers = true
+autosave_all_buffers = true
 enable_hop = false
 
 [[layers]]
