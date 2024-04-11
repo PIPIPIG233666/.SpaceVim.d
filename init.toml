@@ -152,3 +152,6 @@ name = 'lang#toml'
 name = 'lsp'
 enabled_clients = ['clangd', 'lua_ls']
 enable = true
+
+[[custom_plugins]]
+repo = "neoclide/coc-vimtex"
