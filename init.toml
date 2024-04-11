@@ -153,5 +153,12 @@ name = 'lsp'
 enabled_clients = ['clangd', 'lua_ls']
 enable = true
 
+# latex
 [[custom_plugins]]
 repo = "neoclide/coc-vimtex"
+
+# typescript
+[[custom_plugins]]
+repo = "neoclide/coc-tsserver"
+[[custom_plugins]]
+repo = "neoclide/coc-eslint"
