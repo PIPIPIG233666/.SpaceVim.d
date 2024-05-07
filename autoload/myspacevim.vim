@@ -10,11 +10,20 @@ function! myspacevim#before() abort
     let g:vimspector_terminal_minwidth = 20
     let g:vimspector_variables_display_mode = 'full'
 
+    " reset neoformat so that it picks up the correct .clang-format
     let g:neoformat_enabled_cpp = ['clangformat']
 
     call SpaceVim#plugins#tasks#reg_provider(function('s:make_tasks'))
     " lua require('taskprovider')
 endfunction
+
+" I want to leave copilot on for all files except files in a certain directory:
+" I actually need to try harder by myself on eecs281 so disable copilot for that
+augroup copilot_toggle
+  autocmd!
+  autocmd BufNewFile,BufRead * let b:copilot_enabled = 1
+  autocmd BufNewFile,BufRead $HOME/eecs281/* let b:copilot_enabled = 0
+augroup END
 
 function! myspacevim#after() abort
     " you can remove key binding in bootstrap_after function

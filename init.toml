@@ -148,10 +148,10 @@ python_file_head = [
 [[layers]]
 name = 'lang#toml'
 
+# enable lsp for cpp, typescript and vue
 [[layers]]
 name = 'lsp'
-enabled_clients = ['clangd', 'lua_ls']
-enable = true
+filetypes = ['c', 'cpp', 'typescript', 'vue']
 
 # latex
 [[custom_plugins]]
