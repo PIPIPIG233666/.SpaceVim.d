@@ -22,7 +22,7 @@ endfunction
 augroup copilot_toggle
   autocmd!
   autocmd BufNewFile,BufRead * let b:copilot_enabled = 1
-  autocmd BufNewFile,BufRead $HOME/eecs281/* let b:copilot_enabled = 0
+  autocmd BufNewFile,BufRead $HOME/eecs281-sp24/* let b:copilot_enabled = 0
 augroup END
 
 function! myspacevim#after() abort

@@ -148,6 +148,9 @@ python_file_head = [
 [[layers]]
 name = 'lang#toml'
 
+[[layers]]
+  name = "lang#typescript"
+
 # enable lsp for cpp, typescript and vue
 [[layers]]
 name = 'lsp'
