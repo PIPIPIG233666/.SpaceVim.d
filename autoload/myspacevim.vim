@@ -13,17 +13,15 @@ function! myspacevim#before() abort
     " reset neoformat so that it picks up the correct .clang-format
     let g:neoformat_enabled_cpp = ['clangformat']
 
+    " neoformat can use the local node executable
+    let g:neoformat_try_node_exe = 1
+
+    " performance boost for parsing LSP messages
+    let g:lsp_use_native_client = 1
+
     call SpaceVim#plugins#tasks#reg_provider(function('s:make_tasks'))
     " lua require('taskprovider')
 endfunction
-
-" I want to leave copilot on for all files except files in a certain directory:
-" I actually need to try harder by myself on eecs281 so disable copilot for that
-augroup copilot_toggle
-  autocmd!
-  autocmd BufNewFile,BufRead * let b:copilot_enabled = 1
-  autocmd BufNewFile,BufRead $HOME/eecs281-sp24/* let b:copilot_enabled = 0
-augroup END
 
 function! myspacevim#after() abort
     " you can remove key binding in bootstrap_after function
