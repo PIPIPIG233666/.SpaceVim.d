@@ -167,3 +167,11 @@ repo = "neoclide/coc-vimtex"
 repo = "neoclide/coc-tsserver"
 [[custom_plugins]]
 repo = "neoclide/coc-eslint"
+
+# Conflict marker
+[[custom_plugins]]
+repo = "rhysd/conflict-marker.vim"
+
+# Copilot replacement
+[[custom_plugins]]
+repo = "Exafunction/codeium.vim"
