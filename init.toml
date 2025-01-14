@@ -156,7 +156,7 @@ name = 'lang#toml'
 # enable lsp for cpp, typescript and vue
 [[layers]]
 name = 'lsp'
-filetypes = ['c', 'cpp', 'typescript', 'vue', 'javascript', 'python']
+filetypes = ['c', 'cpp', 'typescript', 'vue', 'javascript', 'pylsp']
 
 # latex
 [[custom_plugins]]
